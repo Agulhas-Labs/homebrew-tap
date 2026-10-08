@@ -13,8 +13,8 @@
 class Sift < Formula
   desc "Swift code index and truthful build/test runner for AI coding agents"
   homepage "https://github.com/Agulhas-Labs/sift"
-  url "https://github.com/Agulhas-Labs/sift/releases/download/v0.1.2/sift-0.1.2-d20465d0-arm64.tar.gz"
-  sha256 "5d029fa05c725887c3b30da6c52bc52ad67975c7dd689b1453e851c24b8b0b09"
+  url "https://github.com/Agulhas-Labs/sift/releases/download/v0.1.3/sift-0.1.3-725ccc04-arm64.tar.gz"
+  sha256 "2fa6a0a04bdf02b05f336e5a82a7de741dce66438c566714eae4303cb2d14ab3"
   license "Apache-2.0"
 
   depends_on arch: :arm64
