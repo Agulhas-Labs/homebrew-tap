@@ -13,8 +13,8 @@
 class Sift < Formula
   desc "Swift code index and truthful build/test runner for AI coding agents"
   homepage "https://github.com/Agulhas-Labs/sift"
-  url "https://github.com/Agulhas-Labs/sift/releases/download/v0.1.4/sift-0.1.4-4484c43c-arm64.tar.gz"
-  sha256 "7eddda2e610e7a868498765de7f0ddd9349a893be5fa698534419fc00d60a78d"
+  url "https://github.com/Agulhas-Labs/sift/releases/download/v0.1.5/sift-0.1.5-3be5c4e4-arm64.tar.gz"
+  sha256 "0add2d70589a00c637f861542cb066820df8667d82f8cd82c18ff9246be1b9ae"
   license "Apache-2.0"
 
   depends_on arch: :arm64
@@ -33,9 +33,9 @@ class Sift < Formula
         sift install
 
       It finds each agent, asks once per agent, and says what it wrote. Then, in a Swift repository,
-      `sift status` — the first query indexes it. Start a NEW Claude Code session afterwards (restart
-      Cursor; restart Codex and approve the trust prompt it shows); running ones keep the old server
-      process and the old context.
+      `sift status` — the first query indexes it. On an upgrade a running Claude Code session's server
+      re-execs into the new binary and the hooks apply at once; after a first install, and for the session primer, the
+      tool list and the rule file, start a NEW one (restart Cursor; restart Codex and approve the trust prompt it shows).
     EOS
   end
 
