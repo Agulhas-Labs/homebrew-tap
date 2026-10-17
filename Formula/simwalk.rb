@@ -20,8 +20,10 @@ class Simwalk < Formula
 
   def install
     bin.install "bin/simwalk"
-    # RUNNER_COMMIT and BINARY_SHA256 go with the sources: the binary reads both from share/simwalk.
-    pkgshare.install Dir["share/simwalk/*"]
+    # RUNNER_COMMIT, BINARY_SHA256 and RUNNER_FILES go with the sources: the binary reads them from share/simwalk.
+    # Every entry, dot-paths included: a `share/simwalk/*` glob skips .agents/, which RUNNER_FILES lists, and the
+    # binary refuses a runner tree missing a listed file.
+    pkgshare.install (buildpath/"share/simwalk").children
     doc.install "INSTALL.md", "THIRD-PARTY-NOTICES.txt"
   end
 
@@ -40,5 +42,9 @@ class Simwalk < Formula
     assert_match version.to_s, shell_output("#{bin}/simwalk --version")
     # The runner is paired with the binary by this hash, so brew must not have altered the binary's bytes.
     assert_equal (pkgshare/"BINARY_SHA256").read.strip, Digest::SHA256.file(bin/"simwalk").hexdigest
+    # The binary refuses a runner tree missing a file RUNNER_FILES lists, or holding one with other bytes.
+    cd pkgshare do
+      system "shasum", "-a", "256", "--check", "--quiet", "RUNNER_FILES"
+    end
   end
 end
