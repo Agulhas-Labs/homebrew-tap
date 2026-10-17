@@ -10,8 +10,8 @@
 class Simwalk < Formula
   desc "Deterministic UI walks of a running iOS app, as resolved observations"
   homepage "https://github.com/Agulhas-Labs/simwalk"
-  url "https://github.com/Agulhas-Labs/simwalk/releases/download/v0.1.1/simwalk-0.1.1-9d899fc2-arm64.tar.gz"
-  sha256 "787a476be992a93b4da6dae3c0d4458bfc01246d1243314bc5a37dc4fdbf5ccc"
+  url "https://github.com/Agulhas-Labs/simwalk/releases/download/v0.1.2/simwalk-0.1.2-97b8e4ca-arm64.tar.gz"
+  sha256 "ad09364f12d2d9f638d4c3ba3380f59b8d58612a110d35a6ea940cc3ccdbd524"
   license "Apache-2.0"
 
   depends_on xcode: ["27.0", :build]
