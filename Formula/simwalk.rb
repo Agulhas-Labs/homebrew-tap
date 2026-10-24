@@ -10,8 +10,8 @@
 class Simwalk < Formula
   desc "Deterministic UI walks of a running iOS app, as resolved observations"
   homepage "https://github.com/Agulhas-Labs/simwalk"
-  url "https://github.com/Agulhas-Labs/simwalk/releases/download/v0.1.4/simwalk-0.1.4-7181a043-arm64.tar.gz"
-  sha256 "638e8bf2ca19434f386ba306e48afc6ca59e873451f5cd4ad3e830689978bfd0"
+  url "https://github.com/Agulhas-Labs/simwalk/releases/download/v0.1.5/simwalk-0.1.5-2b81dce8-arm64.tar.gz"
+  sha256 "bc1bd24325d8469b651c1eb4cf023d33095dfd02b5eee4a824a8990c1f1fa93d"
   license "Apache-2.0"
 
   depends_on xcode: ["27.0", :build]
@@ -29,10 +29,13 @@ class Simwalk < Formula
 
   def caveats
     <<~EOS
-      Installing this package does not write to ~/.claude, which is your own configuration. To register
-      SimWalk's MCP server, hook and agent guide with Claude Code:
+      Installing this package does not write to any coding agent's configuration, which is your own. To set
+      SimWalk up in the coding agents on this machine (Claude Code, Cursor), asking once per agent, and SwiftSure
+      too where it is installed:
 
-        simwalk install-hook
+        simwalk install
+
+      Without a terminal to ask on, pass --agent <name> or --yes.
 
       The first walk builds SimWalk's XCUITest runner with xcodebuild, so Xcode must be installed.
     EOS
