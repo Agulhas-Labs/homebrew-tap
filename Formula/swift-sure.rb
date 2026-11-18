@@ -2,8 +2,8 @@
 # fills in the version and the checksum of the release it is cutting — never edit those by hand.
 #
 # The URL is built from the artifact being released, not from a filename pattern: `make-dist.sh`
-# stamps a public-commit or source-tree hash into the name it produces, so a pattern here would point at a file that is never
-# uploaded under that name.
+# stamps a public-commit or source-tree hash into the name it produces, so a pattern here would point at a
+# file that is never uploaded under that name.
 #
 # The formula installs the binary, the agent rule and the docs, and stops there. The docs go into one
 # directory with the layout the release bundle has, so the links between them resolve as they do there.
@@ -15,8 +15,8 @@
 class SwiftSure < Formula
   desc "Swift code index and truthful build/test runner for AI coding agents"
   homepage "https://github.com/Agulhas-Labs/swift-sure"
-  url "https://github.com/Agulhas-Labs/swift-sure/releases/download/v0.4.0/swift-sure-0.4.0-8e426d85-arm64.tar.gz"
-  sha256 "4c3c5460977ae9b822ca18beeedf06350726a9815124969d8141c3d09f641f8e"
+  url "https://github.com/Agulhas-Labs/swift-sure/releases/download/v0.4.1/swift-sure-0.4.1-2f5f2f7f-arm64.tar.gz"
+  sha256 "39047cd1b17d310dcaa7ffd7e26877049ed63cca8580e1d719a574b9a0948e61"
   license "Apache-2.0"
 
   depends_on arch: :arm64
