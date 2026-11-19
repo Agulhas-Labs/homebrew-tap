@@ -15,8 +15,8 @@
 class SwiftSure < Formula
   desc "Swift code index and truthful build/test runner for AI coding agents"
   homepage "https://github.com/Agulhas-Labs/swift-sure"
-  url "https://github.com/Agulhas-Labs/swift-sure/releases/download/v0.4.1/swift-sure-0.4.1-2f5f2f7f-arm64.tar.gz"
-  sha256 "39047cd1b17d310dcaa7ffd7e26877049ed63cca8580e1d719a574b9a0948e61"
+  url "https://github.com/Agulhas-Labs/swift-sure/releases/download/v0.4.2/swift-sure-0.4.2-2f4225ca-arm64.tar.gz"
+  sha256 "abf54c48ea72c50723fd3fa5a6910a42defaaf10457025d41088eb2b4d424e14"
   license "Apache-2.0"
 
   depends_on arch: :arm64
