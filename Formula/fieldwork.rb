@@ -8,8 +8,8 @@
 class Fieldwork < Formula
   desc "SwiftSure and SimWalk, the Fieldwork tools for coding agents"
   homepage "https://github.com/Agulhas-Labs/swift-fieldwork"
-  url "https://github.com/Agulhas-Labs/swift-fieldwork/archive/refs/tags/0.9.0.tar.gz"
-  sha256 "4b23c8d40f658262f845c3b44ca41b80508ef5f4d72e215e9530488c22b461c1"
+  url "https://github.com/Agulhas-Labs/swift-fieldwork/archive/refs/tags/0.11.0.tar.gz"
+  sha256 "d75fe5862d0c062e1d799a5d232e7461814f7846c508a54fcbb60b080390811c"
   license "Apache-2.0"
 
   depends_on "agulhas-labs/tap/simwalk"
