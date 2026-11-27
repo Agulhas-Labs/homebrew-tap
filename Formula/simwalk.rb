@@ -10,8 +10,8 @@
 class Simwalk < Formula
   desc "Deterministic UI walks of a running iOS app, as resolved observations"
   homepage "https://github.com/Agulhas-Labs/simwalk"
-  url "https://github.com/Agulhas-Labs/simwalk/releases/download/v0.1.6/simwalk-0.1.6-7046f32e-arm64.tar.gz"
-  sha256 "666e64c2a696da5e6f9fcf69153d4edd70fb44d444ec4eb274f903706f1215e0"
+  url "https://github.com/Agulhas-Labs/simwalk/releases/download/v0.1.8/simwalk-0.1.8-e77f6953-arm64.tar.gz"
+  sha256 "4c514dd43c162bc831abedb35a00b17df5d7be478a7c61af7405422893bfbd44"
   license "Apache-2.0"
 
   depends_on xcode: ["27.0", :build]
@@ -21,8 +21,8 @@ class Simwalk < Formula
   def install
     bin.install "bin/simwalk"
     # RUNNER_COMMIT, BINARY_SHA256 and RUNNER_FILES go with the sources: the binary reads them from share/simwalk.
-    # Every entry, dot-paths included: a `share/simwalk/*` glob skips .agents/, which RUNNER_FILES lists, and the
-    # binary refuses a runner tree missing a listed file.
+    # Every child, by `.children` rather than a `share/simwalk/*` glob: a glob skips dot-named entries, and the
+    # binary refuses a runner tree missing a file RUNNER_FILES lists.
     pkgshare.install (buildpath/"share/simwalk").children
     doc.install "INSTALL.md", "THIRD-PARTY-NOTICES.txt"
   end
